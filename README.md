@@ -68,5 +68,4 @@ MIT / BSD
 
 ## Author Information
 
-Thiago Gomes
-- thiago.mgomes [at] gmail.com
+Amrit Singh
