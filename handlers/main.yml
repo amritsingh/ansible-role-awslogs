@@ -1,6 +1,3 @@
 - name: restart awslogs
-  service:
-    name: awslogs
-    state: restarted
-    enabled: yes
-  ignore_errors: yes
+  systemd: name=awslogs state=started
+  sudo: True

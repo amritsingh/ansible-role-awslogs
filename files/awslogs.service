@@ -9,6 +9,7 @@ KillMode=process
 TimeoutSec=infinity
 PIDFile=/var/awslogs/state/awslogs.pid
 ExecStart=/var/awslogs/bin/awslogs-agent-launcher.sh --start --background --pidfile $PIDFILE --user awslogs --chuid awslogs &
+ExecStop=/bin/bash -lc "echo \"Stopping system awslogs daemon\"; ppids=`ps axo pid,comm | grep "awslogs-agent-l" | awk '{print $1}'`; for pid in $ppids; do pkill -15 -P $pid > /dev/null 2>&1; done; sleep 3; procList=`ps axo pid,comm | grep "awslogs-agent-l"`; procsAlive=$?; ppids=`${procList} | awk '{print $1}'`; if [ $procsAlive = 0  ]; then for pid in $ppids; do pkill -9 -P $pid > /dev/null 2>&1; done; fi; procList=`ps axo pid,comm | grep "awslogs-agent-l"`; if [ $? != 0  ]; then RETVAL=0; else RETVAL=1; fi"
 
 [Install]
 WantedBy=multi-user.target

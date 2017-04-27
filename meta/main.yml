@@ -1,9 +1,9 @@
 galaxy_info:
-  author: Thiago Gomes (thiagomgo)
-  description: An ansible role to install and configure the AWS CloudWatch Logs
+  author: Amrit Singh (amritsingh)
+  description: An ansible role to install, configure the AWS CloudWatch Logs and setup systemd service
   company:
   license: "license (BSD, MIT)"
-  min_ansible_version: 1.9
+  min_ansible_version: 0.1
   platforms:
     - name: EL
       versions:
