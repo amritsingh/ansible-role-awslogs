@@ -1,8 +1,6 @@
 # **Ansible Role: AWSLogs**
 
-[![Build Status](https://travis-ci.org/thiagomgo/ansible-role-awslogs.svg?branch=master)](https://travis-ci.org/thiagomgo/ansible-role-awslogs) [![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-awslogs-blue.svg)](https://galaxy.ansible.com/thiagomgo/awslogs/)
-
-This role install and configure the AWS CloudWatch Logs.
+This role installs, configures the AWS CloudWatch Logs and setup systemd service. This roles works only for the host with Ubuntu 16.04 or above.
 
 ## Requirements
 
