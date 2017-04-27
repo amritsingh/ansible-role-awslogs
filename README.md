@@ -2,6 +2,10 @@
 
 This role installs, configures the AWS CloudWatch Logs and setup systemd service. This roles works only for the host with Ubuntu 16.04 or above.
 
+## Installation
+
+ansible-galaxy install amritsingh.awslogs
+
 ## Requirements
 
 This role only requires Ansible version 1.9+ and EC2_FACTS module.
@@ -56,7 +60,7 @@ None
         group_name: boot
 
   roles:
-    - ansible-role-awslogs
+    - amritsingh.awslogs
 
 ```
 
