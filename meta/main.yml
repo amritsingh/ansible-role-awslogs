@@ -10,9 +10,7 @@ galaxy_info:
       - all
   galaxy_tags:
     - awslogs
-    - system.d
     - systemd
-    - system
     - cloud
     - cloud:ec2
 dependencies: []
