@@ -1,8 +1,8 @@
 ---
 
 - shell: systemctl daemon-reload
-  sudo: True
+  become: True
 
 - name: "awslogs | Start the service"
   systemd: name=awslogs state=started
-  sudo: True
+  become: True

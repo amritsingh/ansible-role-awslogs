@@ -1,3 +1,3 @@
 - name: restart awslogs
   systemd: name=awslogs state=started
-  sudo: True
+  become: True
