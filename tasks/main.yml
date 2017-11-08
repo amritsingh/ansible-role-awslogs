@@ -1,23 +1,23 @@
 ---
 
-- include: conf.yml
+- import_tasks: conf.yml
   tags:
     - configure
     - awslogs
 
-- include: install.yml
+- import_tasks: install.yml
   tags:
     - install
     - awslogs
 
-- include: start.yml
+- import_tasks: start.yml
   tags:
     - start
     - restart
     - service
     - awslogs
 
-- include: cleanup.yml
+- import_tasks: cleanup.yml
   tags:
     - cleanup
     - awslogs
