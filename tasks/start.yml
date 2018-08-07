@@ -4,5 +4,5 @@
   become: True
 
 - name: "awslogs | Start the service"
-  systemd: name=awslogs state=started
+  systemd: name=awslogs state=started enabled=yes
   become: True
