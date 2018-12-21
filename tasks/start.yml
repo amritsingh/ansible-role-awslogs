@@ -3,6 +3,6 @@
 - shell: systemctl daemon-reload
   become: True
 
-- name: "awslogs | Start the service"
-  systemd: name=awslogs state=started
+- name: "awslogs | Restart the service"
+  systemd: name=awslogs state=restarted
   become: True
